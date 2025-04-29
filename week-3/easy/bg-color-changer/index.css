@@ -1,0 +1,19 @@
+.container{
+    width: 180vh;
+    height: 100vh;
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

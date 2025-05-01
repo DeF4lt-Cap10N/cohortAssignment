@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.hidden {
+  display: none;
+}
+
+
+.container{
+  display: flex;
+  gap: 5px;
+  border: 1px solid rgb(231, 211, 25);
+  width: 98%;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.type{
+  width: 98%;
+  border: 1px solid greenyellow;
+  margin: 5px;
+  height: 42px;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.todo{
+  width: 100%;
+  border: 1px solid green;
+  max-height: 100%; 
+  min-height: 80vh;
+}
+
+.todoData{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+
+}
+
+
+
+.showBtn{
+  font-size: 20px;
+  width: 98%;
+  border:none;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.inputField{
+  margin: 5px;
+  border: 1px solid #1a1a1a;
+  padding: 5px;
+  
+}
+
+.inputField input{
+  padding: 12px;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid  #1a1a1a;
+}
+
+.inputField button{
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 20%;
+  border-radius: 18px;
+  height: 100%;
+  font-size: larger;
+}
+
+
+.level{
+  width: 30%;
+  border-radius: 18px;
+  text-align: center;
+  font-size: larger;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.levelmark{
+  width: 100px;
+  height: 20px;
+  border-radius: 18px;
+}
+
+.inProgress{
+  width: 100%;
+  border: 1px solid rgb(128, 26, 0);
+  height: 80vh;
+}
+.underReview{
+  width: 100%;
+  border: 1px solid rgb(106, 48, 243);
+  height: 80vh;
+}
+
+.Finshed{
+  width: 100%;
+  border: 1px solid rgb(106, 48, 243);
+  height: 80vh;
+}
+
+.card{
+  position: relative;
+  height: 150px;
+  max-height: 200px;
+  width: 97%;
+  margin: 7px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #f9f9ff; 
+  border: 1px solid #d0d7ff;  
+  color: #1a1a1a;             
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+
+}
+
+
+
+.card-sec-2{
+  position: absolute;
+  display: flex;
+  bottom: 18px;
+  align-items: center;
+  gap: 20px;
+}
+
+.heading{
+  color: black;
+  padding: 5px;
+}
+
+.headingdata{
+  color: grey;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.low {
+  background-color: green ;
+  color: white;
+  padding: 4px 8px;
+  width: 80px; 
+  /* margin-top: 28px; */
+  margin-left: 5px;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.medium {
+  background-color: orange;
+  color: white;
+  padding: 4px 8px;
+  width: 80px; 
+  /* margin-top: 28px; */
+  margin-left: 5px;
+  text-align: center;
+  border-radius: 18px;
+
+}
+.urgent {
+  background-color: red ;
+  color: white;
+  padding: 4px 8px;
+  width: 80px; 
+  /* margin-top: 28px; */
+  margin-left: 5px;
+  text-align: center;
+  border-radius: 18px;
+
+}

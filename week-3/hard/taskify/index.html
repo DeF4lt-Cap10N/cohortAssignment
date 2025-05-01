@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo">
+            <div class="type">To Do</div>
+            <div class="todoData"></div>
+
+            <div class="inputField hidden">
+                <div>
+                    <input type="text" class="headingTodo" placeholder="Heading Todo">
+                    <input type="text" class="todoInput" placeholder="Enter your Todo">
+                </div>
+                <div class="addInput" style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
+                    <select class="level">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <button class="addTodoBtn">add</button>
+                </div>
+
+
+            </div>
+            <button class="showBtn">
+                <span style="float: left;">Add new</span><span style="float:right;">+</span>
+            </button>
+        </div>
+        <div class="inProgress">
+            <div class="type">In Progress</div>
+            <div class="progressData"></div>
+        </div>
+        <div class="underReview">
+            <div class="type">UnderReview</div>
+            <div class="underReviewData"></div>
+        </div>
+        <div class="Finshed">
+            <div class="type">Finished</div>
+            <div class="finisheddata"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

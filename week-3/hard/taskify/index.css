@@ -11,16 +11,32 @@
 .container{
   display: flex;
   gap: 5px;
-  border: 1px solid rgb(231, 211, 25);
   width: 98%;
   height: 100%;
   padding: 10px;
   margin: 10px;
 }
 
+
+.navbar{
+  display: flex;
+  background-color: #2c7a7b;
+  height:80px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 38px;
+  margin-bottom:25px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 .type{
   width: 98%;
-  border: 1px solid greenyellow;
   margin: 5px;
   height: 42px;
   font-size: 34px;
@@ -30,10 +46,37 @@
 
 .todo{
   width: 100%;
-  border: 1px solid green;
   max-height: 100%; 
   min-height: 80vh;
 }
+
+.inProgress{
+  width: 100%;
+  height:100%;
+  min-height: 80vh;
+}
+
+.underReview{
+  width: 100%;
+  height:100%;
+  min-height: 80vh;
+}
+
+.Finshed{
+  width: 100%;
+  height:100%;
+  min-height: 80vh;
+}
+
+.task-list {
+  min-height: 100px;
+  border: 1px dashed transparent;
+}
+
+.task-list.drag-over {
+  border-color: #ccc; /* optional visual feedback */
+}
+
 
 .todoData{
   display: flex;
@@ -44,6 +87,29 @@
 
 }
 
+.progressData{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.underReviewData{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.finisheddata{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
 
 
 .showBtn{
@@ -55,13 +121,49 @@
   border-radius: 12px;
   background-color: #1a1a1a;
   color: #fff;
+  cursor: pointer;
+}
+
+.showBtnInProgress{
+  font-size: 20px;
+  width: 98%;
+  border:none;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.showBtnUnderReview{
+  font-size: 20px;
+  width: 98%;
+  border:none;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.showBtnFinshed{
+  font-size: 20px;
+  width: 98%;
+  border:none;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
 }
 
 .inputField{
   margin: 5px;
   border: 1px solid #1a1a1a;
   padding: 5px;
-  
 }
 
 .inputField input{
@@ -82,6 +184,90 @@
   border-radius: 18px;
   height: 100%;
   font-size: larger;
+  cursor: pointer;
+}
+
+.inputFieldInProgress{
+  margin: 5px;
+  border: 1px solid #1a1a1a;
+  padding: 5px;
+}
+
+.inputFieldInProgress input{
+  padding: 12px;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid  #1a1a1a;
+}
+
+.inputFieldInProgress button{
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 20%;
+  border-radius: 18px;
+  height: 100%;
+  font-size: larger;
+  cursor: pointer;
+}
+
+
+.inputFieldUnderReview{
+  margin: 5px;
+  border: 1px solid #1a1a1a;
+  padding: 5px;
+}
+
+.inputFieldUnderReview input{
+  padding: 12px;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid  #1a1a1a;
+}
+
+.inputFieldUnderReview button{
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 20%;
+  border-radius: 18px;
+  height: 100%;
+  font-size: larger;
+  cursor: pointer;
+}
+
+
+
+.inputFieldFinshed{
+  margin: 5px;
+  border: 1px solid #1a1a1a;
+  padding: 5px;
+}
+
+.inputFieldFinshed input{
+  padding: 12px;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid  #1a1a1a;
+}
+.inputFieldFinshed button{
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 20%;
+  border-radius: 18px;
+  height: 100%;
+  font-size: larger;
+  cursor: pointer;
 }
 
 
@@ -92,6 +278,37 @@
   font-size: larger;
   background-color: #1a1a1a;
   color: #fff;
+  cursor: pointer;
+}
+
+.level1{
+  width: 30%;
+  border-radius: 18px;
+  text-align: center;
+  font-size: larger;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.level2{
+  width: 30%;
+  border-radius: 18px;
+  text-align: center;
+  font-size: larger;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.level3{
+  width: 30%;
+  border-radius: 18px;
+  text-align: center;
+  font-size: larger;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
 }
 
 .levelmark{
@@ -100,27 +317,10 @@
   border-radius: 18px;
 }
 
-.inProgress{
-  width: 100%;
-  border: 1px solid rgb(128, 26, 0);
-  height: 80vh;
-}
-.underReview{
-  width: 100%;
-  border: 1px solid rgb(106, 48, 243);
-  height: 80vh;
-}
-
-.Finshed{
-  width: 100%;
-  border: 1px solid rgb(106, 48, 243);
-  height: 80vh;
-}
 
 .card{
   position: relative;
   height: 150px;
-  max-height: 200px;
   width: 97%;
   margin: 7px;
   border-radius: 18px;
@@ -129,9 +329,7 @@
   border: 1px solid #d0d7ff;  
   color: #1a1a1a;             
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
-
 }
-
 
 
 .card-sec-2{

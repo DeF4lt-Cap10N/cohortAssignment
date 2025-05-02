@@ -9,17 +9,22 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <div>Taskify</div>
+        <a href="https://github.com/DeF4lt-Cap10N">github</a>
+    </nav>
     <div class="container">
         <div class="todo">
             <div class="type">To Do</div>
-            <div class="todoData"></div>
+            <div class="todoData task-list"></div>
 
             <div class="inputField hidden">
                 <div>
                     <input type="text" class="headingTodo" placeholder="Heading Todo">
                     <input type="text" class="todoInput" placeholder="Enter your Todo">
                 </div>
-                <div class="addInput" style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
+                <div class="addInput"
+                    style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
                     <select class="level">
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
@@ -27,24 +32,79 @@
                     </select>
                     <button class="addTodoBtn">add</button>
                 </div>
-
-
             </div>
             <button class="showBtn">
                 <span style="float: left;">Add new</span><span style="float:right;">+</span>
             </button>
         </div>
+        <!-- In Progresss -->
         <div class="inProgress">
             <div class="type">In Progress</div>
-            <div class="progressData"></div>
+            <div class="progressData task-list"></div>
+            <div class="inputFieldInProgress hidden">
+                <div>
+                    <input type="text" class="headingTodoInProgress" placeholder="Heading Todo">
+                    <input type="text" class="todoInputInProgress" placeholder="Enter your Todo">
+                </div>
+                <div class="addInputInProgress"
+                    style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
+                    <select class="level1">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <button class="addTodoBtnInProgress">add</button>
+                </div>
+            </div>
+            <button class="showBtnInProgress">
+                <span style="float: left;">Add new</span><span style="float:right;">+</span>
+            </button>
         </div>
+        <!-- UNder review -->
         <div class="underReview">
             <div class="type">UnderReview</div>
-            <div class="underReviewData"></div>
+            <div class="underReviewData task-list"></div>
+            <div class="inputFieldUnderReview hidden">
+                <div>
+                    <input type="text" class="headingTodoUnderReview" placeholder="Heading Todo">
+                    <input type="text" class="todoInputUnderReview" placeholder="Enter your Todo">
+                </div>
+                <div class="addInputUnderReview"
+                    style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
+                    <select class="level2">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <button class="addTodoBtnUnderReview">add</button>
+                </div>
+            </div>
+            <button class="showBtnUnderReview">
+                <span style="float: left;">Add new</span><span style="float:right;">+</span>
+            </button>
         </div>
+        <!-- Finieshed -->
         <div class="Finshed">
             <div class="type">Finished</div>
-            <div class="finisheddata"></div>
+            <div class="finisheddata task-list"></div>
+            <div class="inputFieldFinshed hidden">
+                <div>
+                    <input type="text" class="headingTodoFinshed" placeholder="Heading Todo">
+                    <input type="text" class="todoInputFinshed" placeholder="Enter your Todo">
+                </div>
+                <div class="addInputFinshed"
+                    style="display: flex; justify-content: space-between; margin-top: 10px; padding: 10px;">
+                    <select class="level3">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <button class="addTodoBtnFinshed">add</button>
+                </div>
+            </div>
+            <button class="showBtnFinshed">
+                <span style="float: left;">Add new</span><span style="float:right;">+</span>
+            </button>
         </div>
     </div>
 

@@ -34,7 +34,7 @@ function createTodo() {
   }
 
 
- // time
+  // time
   const date = new Date();
   const day = date.getDate();
   const months = ["January", "February", "March", "April", "May", "June",
@@ -53,10 +53,17 @@ function createTodo() {
     <div class="card-sec-2">
       <div class="${levelclass}" >${level}</div>
       <div>${formatTime}</div>
+      <button class="deleteBtn">delete</button>
     </div>
     </div>`;
 
-    addDragEvents(card);
+  const deleteBtn = card.querySelector(".deleteBtn");
+  deleteBtn.addEventListener("click", function () {
+    card.remove(); 
+  });
+
+
+  addDragEvents(card);
 
   todoData.appendChild(card);
   showBtn.classList.remove("hidden");
@@ -80,7 +87,7 @@ const addTodoBtnInProgress = document.querySelector(".addTodoBtnInProgress");
 
 
 
-showBtnInProgress.addEventListener("click", function main(){
+showBtnInProgress.addEventListener("click", function main() {
   showBtnInProgress.classList.add("hidden");
   inputFieldInProgress.classList.remove("hidden");
 })
@@ -108,7 +115,7 @@ function createTodoInProgress() {
   }
 
 
- // time
+  // time
   const date = new Date();
   const day = date.getDate();
   const months = ["January", "February", "March", "April", "May", "June",
@@ -130,13 +137,13 @@ function createTodoInProgress() {
     </div>
     </div>`;
 
-    addDragEvents(card);
+  addDragEvents(card);
 
 
 
-   progressData.appendChild(card);
-   showBtnInProgress.classList.remove("hidden");
-   inputFieldInProgress.classList.add("hidden");
+  progressData.appendChild(card);
+  showBtnInProgress.classList.remove("hidden");
+  inputFieldInProgress.classList.add("hidden");
 
 }
 
@@ -154,7 +161,7 @@ const underReviewData = document.querySelector(".underReviewData");
 const addTodoBtnUnderReview = document.querySelector(".addTodoBtnUnderReview");
 
 
-showBtnUnderReview.addEventListener("click", function main(){
+showBtnUnderReview.addEventListener("click", function main() {
   showBtnUnderReview.classList.add("hidden");
   inputFieldUnderReview.classList.remove("hidden");
 })
@@ -182,7 +189,7 @@ function createTodoUnderReview() {
   }
 
 
- // time
+  // time
   const date = new Date();
   const day = date.getDate();
   const months = ["January", "February", "March", "April", "May", "June",
@@ -204,13 +211,13 @@ function createTodoUnderReview() {
     </div>
     </div>`;
 
-    addDragEvents(card);
+  addDragEvents(card);
 
 
 
-    underReviewData.appendChild(card);
-    showBtnUnderReview.classList.remove("hidden");
-    inputFieldUnderReview.classList.add("hidden");
+  underReviewData.appendChild(card);
+  showBtnUnderReview.classList.remove("hidden");
+  inputFieldUnderReview.classList.add("hidden");
 
 }
 
@@ -232,7 +239,7 @@ const addTodoBtnFinshed = document.querySelector(".addTodoBtnFinshed");
 
 
 
-showBtnFinshed.addEventListener("click", function main(){
+showBtnFinshed.addEventListener("click", function main() {
   showBtnFinshed.classList.add("hidden");
   inputFieldFinshed.classList.remove("hidden");
 })
@@ -260,7 +267,7 @@ function createTodoFinshed() {
   }
 
 
- // time
+  // time
   const date = new Date();
   const day = date.getDate();
   const months = ["January", "February", "March", "April", "May", "June",
@@ -282,12 +289,12 @@ function createTodoFinshed() {
     </div>
     </div>`;
 
-    addDragEvents(card);
+  addDragEvents(card);
 
 
-    finisheddata.appendChild(card);
-    showBtnFinshed.classList.remove("hidden");
-    inputFieldFinshed.classList.add("hidden");
+  finisheddata.appendChild(card);
+  showBtnFinshed.classList.remove("hidden");
+  inputFieldFinshed.classList.add("hidden");
 
 }
 

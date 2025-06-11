@@ -11,10 +11,35 @@ const app = express();
 // You have been given a numberOfRequestsForUser object to start off with which
 // clears every one second
 
+
+
 let numberOfRequestsForUser = {};
 setInterval(() => {
     numberOfRequestsForUser = {};
 }, 1000)
+
+function rateLimit(req, res, next){
+  const userId = req.headers["user-id"];
+
+
+  if(!userId){
+   return res.status(400).json({error: "userId not available"});
+  }
+
+  if(!numberOfRequestsForUser[userId]){
+    numberOfRequestsForUser[userId]=1;
+  }else{
+    numberOfRequestsForUser[userId]++;
+  }
+
+  if(numberOfRequestsForUser[userId]>5){
+    return res.status(404).json({error: "rate limit exceed"});
+  }
+
+  next();
+}
+
+app.use(rateLimit);
 
 app.get('/user', function(req, res) {
   res.status(200).json({ name: 'john' });

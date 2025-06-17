@@ -3,6 +3,9 @@ const router = Router();
 const userMiddleware = require("../middleware/user");
 const { v4: uuidv4 } = require('uuid');
 
+
+const {User} =  require("../database/index")
+
 // User Routes
 const userData={};
 const sessions = {};

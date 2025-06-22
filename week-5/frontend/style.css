@@ -1,1 +1,65 @@
-  /* start from here */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.todoForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todoInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.todoData {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e7f3ff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.todoBox {
+  flex: 1;
+}
+
+.editandDeleteBox {
+  display: flex;
+  gap: 10px;
+}
+
+.editBtn,
+.deleteBtn {
+  cursor: pointer;
+  font-size: 18px;
+}

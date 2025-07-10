@@ -7,7 +7,7 @@ let todos = []; // in memory space
 export async function getAllTodo (req, res, next){
     //  write here
     if(todos.length<1){
-        return res.status(404).send("todos are empty!!");
+        return res.status(200).send("todos are empty!!");
     }
 
     return res.status(200).json({todos});
@@ -70,11 +70,11 @@ export async function deleteTodoById (req, res, next){
 
     const foundInd = todos.findIndex((todo)=>todo.id===id);
 
-    if(foundInd==-1){
-        res.status(400).send("Invalid id!!");
+    if(foundInd===-1){
+       return res.status(400).send("Invalid id!!");
     }
     todos.splice(foundInd, 1);
 
-    res.status(200).send("todo deleted sucessfully!!!");
+   return res.status(200).send("todo deleted sucessfully!!!");
 }
 
